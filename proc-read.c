@@ -6,11 +6,11 @@
 #include <linux/proc_fs.h>
 #include <linux/pid.h>
 
-int pid;
+static int pid;
 module_param(pid, int, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP);
 
-struct pid* pid_struct;
-struct task_struct* task_list;
+static struct pid* pid_struct;
+static struct task_struct* task_list;
 
 int proc_read() {
     int len = 0;
