@@ -6,7 +6,7 @@
 #include <linux/proc_fs.h>
 #include <linux/pid.h>
 
-int pid = 1;
+int pid;
 module_param(pid, int, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP);
 
 struct pid* pid_struct;
